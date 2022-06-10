@@ -24,4 +24,23 @@ function maxSubarraySum(arr, num) {
 
 console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4))
 
+Method 2: 
+
+function maxSubarraySum(arr, num) {
+  if (num > arr.length) return null
+  maxSum = 0
+  tempSum = 0
+  for (let i = 0; i < num; i++) {
+    tempSum += arr[i]
+  }
+  maxSum = tempSum
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i]
+    maxSum = Math.max(maxSum, tempSum)
+  }
+  return maxSum
+}
+
+
+console.log(maxSubarraySum([1, 2, 3, 4, 5, 6], 3))
 

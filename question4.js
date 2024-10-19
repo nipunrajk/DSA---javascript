@@ -1,6 +1,25 @@
-/* Q. function that accept sorted array of integers. 
-      The function should find the first pair where the sum is 0.
-      return an array that includes both values that sum to zero or undefined if the pair does not exist. */
+/**
+ * Problem:
+ * You are given a sorted array of integers. Write a function that finds the first pair of numbers in the array whose sum is zero. If such a pair exists, return an array containing both numbers. If no such pair exists, return undefined.
+ * 
+ * Input:
+ * arr: A sorted list of integers.
+ * 
+ * Output:
+ * Returns a list containing the first pair of integers that sum to zero, or None if no such pair exists.
+
+ * 
+ * Example:
+ * arr = [-3, -2, -1, 0, 1, 2, 3]
+   find_first_pair_with_sum_zero(arr) 
+   Output: [-3, 3]
+
+ * arr = [-2, 0, 1, 3]
+   find_first_pair_with_sum_zero(arr)
+
+   Output: None
+ */
+
 
 
 Method 1 :

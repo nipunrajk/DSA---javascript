@@ -35,7 +35,6 @@ function same(arr1, arr2) {
     let expected = arr2.indexOf(arr1[i] ** 2)
     if (expected === -1) return false
     arr2.splice(expected, 1)
-    console.log(arr2)
   }
   return true
 }
@@ -64,3 +63,19 @@ function same(arr1, arr2) {
 
 console.log(same([1, 2, 3, 2, 5], [9, 1, 4, 4, 25]))
 
+Method 3:
+
+function same(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false
+  let frequencyCounter = {};
+  for (let item of arr1){
+  frequencyCounter[item] = (frequencyCounter[item] || 0) + 1
+  }
+  for (let item of arr2){
+   if (!frequencyCounter[Math.sqrt(item)]) return false;
+   else{
+    frequencyCounter[Math.sqrt(item)] -= 1;
+   }
+  }
+ return true;
+}
